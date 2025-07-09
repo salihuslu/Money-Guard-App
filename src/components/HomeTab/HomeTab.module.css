@@ -1,0 +1,36 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.content {
+  display: none;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .dashboard {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 40px;
+  }
+
+  .sidebar {
+    display: flex;
+    flex: 0 0 200px;
+  }
+
+  .content {
+    display: flex;
+    flex: 1;
+  }
+}

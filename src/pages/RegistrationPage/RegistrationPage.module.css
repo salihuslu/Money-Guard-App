@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.container {
+  background-image: url('../../assets/images/background.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+
+}
+
+.title {
+  color: white;
+  font-size: 28px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.favicon {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 5px;
+}
+
+.form {
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  fill: white;
+  opacity: 0.8;
+  transform: translateY(-50%);
+}
+
+.input {
+  width: 100%;
+  padding: 10px 10px 10px 38px;
+  border: none;
+  border-bottom: 1px solid white;
+  background: transparent;
+  color: white;
+  font-size: 16px;
+  outline: none;
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.error {
+  color: #ff6b6b;
+  font-size: 12px;
+}
+
+.loginButton {
+  padding: 12px;
+  border: none;
+  letter-spacing: 1px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s ease;
+  background-color: #FCFCFC;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #623F8B;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 320px;
+  margin-top: 16px;
+}
+
+.registerButton {
+  box-shadow: 0 4px 10px rgba(36, 204, 167, 0.4);
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #FBFBFB;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+  background: linear-gradient(96.76deg, #FFC727 -16.42%, #9E40BA 97.04%, #7000FF 150.71%);
+
+}
+
+@media (min-width: 768px) {
+  .container {
+    background-image: url('/img/register-tablet.webp');
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .form {
+    max-width: 480px;
+    gap: 24px;
+  }
+
+  .input {
+    font-size: 18px;
+    padding: 12px 12px 12px 44px;
+  }
+
+  .registerButton,
+  .loginButton {
+    font-size: 18px;
+    padding: 14px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    background-image: url('/img/register-desktop.webp');
+  }
+
+  .form {
+    max-width: 520px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+  }
+
+  .title {
+    font-size: 42px;
+    margin-bottom: 50px;
+  }
+}

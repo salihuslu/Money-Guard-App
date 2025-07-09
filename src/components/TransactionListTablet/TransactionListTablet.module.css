@@ -1,0 +1,39 @@
+.tableContainer {
+  width: 100%;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.transactionsTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transactionsTable th,
+.transactionsTable td {
+  padding: 12px 16px;
+  text-align: left;
+  color: #fff;
+}
+
+.transactionsTable th {
+  background: rgba(255, 255, 255, 0.05);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.transactionsTable tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.transactionsTable tr:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.sumPositive {
+  color: #00ff00; /* İstediğin renge göre değiştir */
+}
+
+.sumNegative {
+  color: #ff0000;
+}

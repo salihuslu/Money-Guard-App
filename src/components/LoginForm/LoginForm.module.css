@@ -1,0 +1,164 @@
+.logo {
+  width: 42px;
+  height: 42px;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 28px;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+
+.form {
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inputGroup {
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  fill: #999;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 12px 12px 42px;
+  border: none;
+  border-bottom: 2px solid #FFFFFF99;
+  color: #FFFFFF99;
+  border-radius: 0;
+  outline: none;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  background-color: transparent !important;
+  background: transparent !important;
+
+}
+
+.input::placeholder {
+  color: #ffffffcc;
+}
+
+
+.error {
+  color: #ffecec;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.loginButton {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #FBFBFB;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+  background: linear-gradient(96.76deg, #FFC727 -16.42%, #9E40BA 97.04%, #7000FF 150.71%);
+
+}
+
+.registerButton {
+  background-color: #FCFCFC;
+  padding: 14px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #623F8B;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 320px;
+  margin-top: 16px;
+}
+
+.loginButton:hover {
+  background-color: #1f4ed9;
+}
+
+.registerButton:hover {
+  background-color: #3c95e0;
+}
+
+
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 70%;
+    padding: 48px;
+  }
+
+  .form {
+    max-width: 400px;
+    gap: 24px;
+  }
+
+  .input {
+    font-size: 20px;
+    padding: 14px 14px 14px 48px;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+    left: 16px;
+  }
+
+  .registerButton,
+  .loginButton {
+    font-size: 18px;
+    padding: 16px;
+    max-width: 400px;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 600px;
+    padding: 64px;
+    border-radius: 24px;
+    background-color: rgba(255, 255, 255, 0.04);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  }
+
+  .title {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  .form {
+    gap: 28px;
+  }
+
+  .input {
+    font-size: 22px;
+  }
+
+  .registerButton,
+  .loginButton {
+    font-size: 20px;
+    padding: 18px;
+    max-width: 440px;
+  }
+}

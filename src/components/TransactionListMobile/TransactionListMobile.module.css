@@ -1,0 +1,61 @@
+.mobileList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 16px;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .transactionCard {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 16px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .transactionCardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .transactionCardRow {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+  
+  .sumPositive {
+    color: #00ff00;
+  }
+  
+  .sumNegative {
+    color: #ff0000;
+  }
+  
+  .actionButtons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+  }
+  
+  .deleteButton {
+    background: linear-gradient(to right, #ff6b6b, #f94d4d);
+    border: none;
+    border-radius: 8px;
+    padding: 6px 12px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .editButton {
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+  

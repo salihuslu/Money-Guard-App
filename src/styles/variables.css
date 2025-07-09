@@ -1,0 +1,20 @@
+:root {
+  /* Renk paleti */
+  --primary-color: #4CAF50;
+  --secondary-color: #FFC107;
+  --accent-color: #00BCD4;
+  --text-color: #212121;
+  --background-color: #F5F5F5;
+
+  /* Yazı tipi */
+  --font-family-base: 'Poppins', sans-serif;
+
+  /* Boşluklar */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  --error-color: red;
+}
