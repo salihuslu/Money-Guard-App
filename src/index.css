@@ -1,7 +1,6 @@
-/* src/index.css */
+
 @import './styles/variables.css';
 
-/* Modern normalize gibi sıfırlamalar */
 *,
 *::before,
 *::after {

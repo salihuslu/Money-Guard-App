@@ -34,7 +34,7 @@ const TransactionItem = ({ transaction, isMobile = false }) => {
                     <button onClick={handleDelete} className={styles.deleteBtn}>Delete</button>
                     <button onClick={handleEdit} className={styles.editBtn}>
                         <svg className={styles.editIcon} width="16" height="16">
-                            <use href="/src/sprite.svg#icon-pen" />
+                            <use href="src/sprite.svg#icon-pen" />
                         </svg>
                         Edit</button>
 
@@ -53,7 +53,7 @@ const TransactionItem = ({ transaction, isMobile = false }) => {
             <td>{transaction.amount}</td>
             <td>
                 <button onClick={handleEdit} className={styles.editBtn}><svg className={styles.editIcon} width="16" height="16">
-                    <use href="/src/sprite.svg#icon-pen" />
+                    <use href="src/sprite.svg#icon-pen" />
                 </svg></button>
                 <button onClick={handleDelete} className={styles.deleteBtn}>Delete</button>
             </td>

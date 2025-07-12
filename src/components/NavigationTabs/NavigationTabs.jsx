@@ -30,7 +30,7 @@ const NavigationTabs = ({ onTabChange }) => {
                         onClick={() => handleTabClick('statistics')}
                     >
                         <svg className={styles.icon}>
-                            <use href="/src/sprite.svg#icon-graphic" />
+                            <use href="src/sprite.svg#icon-graphic" />
                         </svg>
                         <span className={styles.label}>Statistics</span>
                     </button>
@@ -42,7 +42,7 @@ const NavigationTabs = ({ onTabChange }) => {
                         onClick={() => handleTabClick('currency')}
                     >
                         <svg className={styles.icon}>
-                            <use href="/src/sprite.svg#icon-dollar" />
+                            <use href="src/sprite.svg#icon-dollar" />
                         </svg>
                     </button>
                 </li>
