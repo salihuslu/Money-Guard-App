@@ -76,7 +76,6 @@ export const refreshUser = createAsyncThunk(
 
         try {
             const { data } = await userTransactionsApi.get('/users/current');
-            console.log({ data })
             return data;
         } catch (error) {
             return thunkAPI.rejectWithValue('Session refresh failed');

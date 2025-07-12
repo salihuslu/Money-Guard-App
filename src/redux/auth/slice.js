@@ -69,7 +69,7 @@ const authSlice = createSlice({
             )
             .addMatcher(
                 action => action.type.endsWith('/rejected'),
-                (state, action) => {
+                (state) => {
                     state.isRefreshing = false;
                 }
             );

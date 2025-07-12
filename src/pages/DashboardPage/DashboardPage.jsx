@@ -63,8 +63,10 @@ const DashboardPage = () => {
                 <div className={styles.dashboard}>
                     <div className={styles.content}>
                         <div className={styles.sidebar}>
-                            <NavigationTabs onTabChange={setActiveTab} />
-                            <Balance amount={balance} />
+                            <div className={styles.sideTab}>
+                                <NavigationTabs onTabChange={setActiveTab} />
+                                <Balance amount={balance} />
+                            </div>
                             <Currency />
                         </div>
                         {activeTab === "home" &&

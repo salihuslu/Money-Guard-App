@@ -17,8 +17,6 @@ const AppWrapper = () => {
   const dispatch = useDispatch();
   const token = useSelector(selectToken);
 
-  console.log({ token })
-
   useEffect(() => {
     if (token) {
       dispatch(refreshUser());
