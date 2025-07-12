@@ -11,7 +11,7 @@ import {
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
-import authReducer from './Auth/slice';
+import authReducer from './auth/slice';
 import modalsReducer from './Modals/slice';
 import { transactionsReducer } from './Transactions/slice';
 import { statisticsReducer } from './Statistics/slice';
