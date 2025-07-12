@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Navigate } from 'react-router-dom';
-import { refreshUser } from '../../redux/Auth/operations';
+import { refreshUser } from '../../redux/auth/operations';
 
 const ProtectedRoute = ({ children }) => {
     const dispatch = useDispatch();

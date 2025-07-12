@@ -6,8 +6,8 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { Provider } from 'react-redux';
 import { store, persistor } from './redux/store';
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
-import { refreshUser } from './redux/Auth/operations';
-import { selectToken } from './redux/Auth/selectors'
+import { refreshUser } from './redux/auth/operations';
+import { selectToken } from './redux/auth/selectors'
 
 const LoginPage = lazy(() => import('./pages/LoginPage/LoginPage'));
 const RegistrationPage = lazy(() => import('./pages/RegistrationPage/RegistrationPage'));

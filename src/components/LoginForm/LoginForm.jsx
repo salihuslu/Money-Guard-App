@@ -3,7 +3,7 @@ import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
 import styles from './LoginForm.module.css';
 import { useDispatch } from 'react-redux';
-import { login } from '../redux/Auth/operations';
+import { login } from '../redux/auth/operations';
 import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
