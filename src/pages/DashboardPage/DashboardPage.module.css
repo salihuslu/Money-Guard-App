@@ -1,115 +1,128 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 .container {
-    min-height: 100vh;
-    padding: 16px;
-    background-image: url('../../assets/images/background.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    font-family: 'Poppins', sans-serif;
-    flex-direction: column;
-    background: linear-gradient(to bottom right, #2e004f, #3a1d63, #4d2d88);
-    color: #fff;
-  }
-  
-  .container::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: -1;
-  }
-  
-  .header {
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 24px;
-  }
-  
-  .logoTitle {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .logo {
-    width: 32px;
-    height: 32px;
-  }
-  
-  .title {
-    font-size: 20px;
-    font-weight: 600;
-  }
-  
-  .exitButton {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-  }
-  
-  .exitIcon {
-    width: 24px;
-    height: 24px;
-  }
-  
-  .main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    text-transform: uppercase;
-  }
-  
-  .content {
-    font-size: 18px;
-    color: #ffffffcc;
-    padding: 24px;
-  }
-  .mainContent {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .currencyDesktop {
-    display: none;
-  }
-  .dashboard {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    background: url('/src/assets/images/background.png') no-repeat center center;
-    background-size: cover;
-  }
-  @media screen and (min-width: 768px) {
-    .container {
-      padding: 32px 48px;
-      flex-direction: row;
-    }
-  
-    .title {
-      font-size: 28px;
-    }
-  
-    .mainContent {
-      flex-direction: row;
-      gap: 24px;
-      flex: 1;
-    }
-  
-    .currencyDesktop {
-      width: 280px;
-    }
-    .sidebar {
-      width: 100%;
-      display: flex;
-      gap: 24px;
-    }
+  min-height: 100vh;
+  padding: 16px;
+  background-image: url('../../assets/images/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  flex-direction: column;
+  background: linear-gradient(to bottom right, #2e004f, #3a1d63, #4d2d88);
+  color: #fff;
+}
 
-    
+.container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.header {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.logoTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.exitButton {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.exitIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.content {
+  font-size: 18px;
+  color: #ffffffcc;
+  padding: 24px;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboardTablet {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.tabletTopRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.navBalance {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.transactionSection {
+  flex: 1;
+}
+
+.dashboardDesktop {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex: 0 0 300px;
+}
+
+.transactionSection {
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 32px 48px;
   }
+
+  .title {
+    font-size: 28px;
+  }
+}

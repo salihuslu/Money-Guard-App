@@ -1,61 +1,79 @@
 .mobileList {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 16px;
-    padding: 0;
-    list-style: none;
-  }
-  
-  .transactionCard {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 12px;
-    padding: 16px;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-  
-  .transactionCardHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .transactionCardRow {
-    display: flex;
-    justify-content: space-between;
-    font-size: 14px;
-  }
-  
-  .sumPositive {
-    color: #00ff00;
-  }
-  
-  .sumNegative {
-    color: #ff0000;
-  }
-  
-  .actionButtons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 12px;
-  }
-  
-  .deleteButton {
-    background: linear-gradient(to right, #ff6b6b, #f94d4d);
-    border: none;
-    border-radius: 8px;
-    padding: 6px 12px;
-    color: #fff;
-    cursor: pointer;
-  }
-  
-  .editButton {
-    background: transparent;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+  padding: 0 20px; /* Ekrana yaslanmasın */
+  list-style: none;
+}
+
+.transactionCard {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.02)
+  );
+  border-radius: 12px;
+  padding: 16px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.transactionCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.transactionCardRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.sumPositive {
+  color: #24cca7; /* Figma'daki artı yeşili */
+  font-weight: bold;
+}
+
+.sumNegative {
+  color: #ff6596; /* Figma'daki eksi kırmızısı */
+  font-weight: bold;
+}
+
+.actionButtons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.deleteButton {
+  background: linear-gradient(90deg, #ffb627 0%, #ff6596 100%);
+  border: none;
+  border-radius: 20px;
+  padding: 6px 20px;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.editButton {
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  gap: 4px;
+  opacity: 0.8;
+}
+
+.editButton:hover {
+  opacity: 1;
+}

@@ -7,13 +7,13 @@ import { useForm, Controller } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { format } from 'date-fns';
-import { selectCategories } from '../../redux/Statistics/selectors';
+import { selectCategories } from '../../redux/statistics/selectors';
 import { useSelector } from 'react-redux';
 import Select from 'react-select';
 import { customStyles } from './customStyles';
 import { useDispatch } from 'react-redux';
-import { addTransaction } from '../../redux/Transactions/operations';
-import { closeAddModal } from '../../redux/Modals/slice';
+import { addTransaction } from '../../redux/transactions/operations';
+import { closeAddModal } from '../../redux/modals/slice';
 import CustomDropIndicator from '../CustomDropIndicator/CustomDropIndicator';
 
 function AddTransactionForm() {

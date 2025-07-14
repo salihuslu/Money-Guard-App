@@ -3,20 +3,23 @@
 .card {
     background: linear-gradient(135deg, #6f42c1, #9b59b6);
     color: white;
-    padding: 24px;
-    border-radius: 20px;
+    padding: 8px 30px;
+    border-radius: 8px;
     text-align: center;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    width: 280px;
   }
   
   .label {
     font-size: 18px;
-    font-weight: 500;
-    margin-bottom: 8px;
+    font-weight: 400;
+    display: flex;
+    color: #FFFFFF66;
   }
   
   .amount {
     font-size: 32px;
     font-weight: 700;
+    display: flex;
   }
   

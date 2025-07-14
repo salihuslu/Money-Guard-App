@@ -1,6 +1,20 @@
+.mobileList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 16px auto 0 auto;
+  padding: 0;
+  list-style: none;
+  align-items: center;
+}
 
 .card {
-  background: rgba(255, 255, 255, 0.05);
+  width: 280px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.02)
+  );
   border-radius: 12px;
   padding: 16px;
   color: #fff;
@@ -9,26 +23,48 @@
 .cardContent {
   display: flex;
   flex-direction: column;
-  gap: 6px;
 }
 
-.cardContent p {
-  margin: 0;
+.cardRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cardRow:last-child {
+  border-bottom: none; /* Sum satırında çizgi olmasın */
+}
+
+.cardRow strong {
+  font-weight: 600;
   font-size: 14px;
 }
 
-.cardContent strong {
-  display: inline-block;
-  width: 80px;
-  font-weight: 600;
+.cardRow span {
+  font-size: 14px;
 }
 
+/* Sum Renkleri */
+.sumIncome {
+  color: #FFB627;
+  font-weight: bold;
+}
+
+.sumExpense {
+  color: #FF868D;
+  font-weight: bold;
+}
+
+/* Footer */
 .cardFooter {
   margin-top: 12px;
   display: flex;
   justify-content: space-between;
 }
 
+/* Butonlar */
 .editBtn {
   background: none;
   border: none;
@@ -40,14 +76,24 @@
   align-items: center;
   gap: 4px;
   font-size: 12px;
+  opacity: 0.8;
+}
+
+.editBtn:hover {
+  opacity: 1;
 }
 
 .deleteBtn {
-  background: linear-gradient(96.76deg, #FFC727 -16.42%, #9E40BA 97.04%, #7000FF 150.71%);
+  background: linear-gradient(
+    96.76deg,
+    #ffc727 -16.42%,
+    #9e40ba 97.04%,
+    #7000ff 150.71%
+  );
   border: none;
   color: #fff;
-  border-radius: 4px;
-  padding: 4px 10px;
+  border-radius: 20px;
+  padding: 6px 20px;
   cursor: pointer;
   font-size: 12px;
 }
@@ -58,7 +104,7 @@
   height: 16px;
 }
 
-
+/* Masa Üstü Tablolar */
 tr {
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -91,10 +137,14 @@ td .editBtn {
 }
 
 td .deleteBtn {
-  background: linear-gradient(96.76deg, #FFC727 -16.42%, #9E40BA 97.04%, #7000FF 150.71%);
+  background: linear-gradient(
+    96.76deg,
+    #ffc727 -16.42%,
+    #9e40ba 97.04%,
+    #7000ff 150.71%
+  );
   border: none;
   color: #fff;
-  border-radius: 4px;
+  border-radius: 20px;
   padding: 4px 10px;
 }
-

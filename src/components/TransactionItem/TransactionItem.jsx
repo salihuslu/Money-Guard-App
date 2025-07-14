@@ -1,8 +1,10 @@
 import styles from './TransactionItem.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteTransaction } from '../../redux/Transactions/operations';
-import { openEditModal, setEditID } from '../../redux/Modals/slice';
-import { selectCategories } from '../../redux/Statistics/selectors';
+import { deleteTransaction } from '../../redux/transactions/operations';
+import { openEditModal, setEditID } from '../../redux/modals/slice';
+import { selectCategories } from '../../redux/statistics/selectors';
+
+import sprite from '../../sprite.svg'; // sprite dosyasını import et
 
 const TransactionItem = ({ transaction, isMobile = false }) => {
     const dispatch = useDispatch();
@@ -24,37 +26,67 @@ const TransactionItem = ({ transaction, isMobile = false }) => {
         return (
             <li className={styles.card}>
                 <div className={styles.cardContent}>
-                    <p><strong>Date</strong> {transaction.transactionDate}</p>
-                    <p><strong>Type</strong> {transaction.type}</p>
-                    <p><strong>Category</strong> {categoryName}</p>
-                    <p><strong>Comment</strong> {transaction.comment}</p>
-                    <p><strong>Sum</strong> {transaction.amount}</p>
+                    <div className={styles.cardRow}>
+                        <strong>Date</strong>
+                        <span>{transaction.transactionDate}</span>
+                    </div>
+                    <div className={styles.cardRow}>
+                        <strong>Type</strong>
+                        <span>{transaction.type}</span>
+                    </div>
+                    <div className={styles.cardRow}>
+                        <strong>Category</strong>
+                        <span>{categoryName}</span>
+                    </div>
+                    <div className={styles.cardRow}>
+                        <strong>Comment</strong>
+                        <span>{transaction.comment}</span>
+                    </div>
+                    <div className={styles.cardRow}>
+                        <strong>Sum</strong>
+                        <span className={
+                            transaction.type === 'INCOME'
+                                ? styles.sumIncome
+                                : styles.sumExpense
+                        }>
+                            {Math.abs(transaction.amount)}
+                        </span>
+                    </div>
                 </div>
                 <div className={styles.cardFooter}>
                     <button onClick={handleDelete} className={styles.deleteBtn}>Delete</button>
                     <button onClick={handleEdit} className={styles.editBtn}>
                         <svg className={styles.editIcon} width="16" height="16">
-                            <use href="src/sprite.svg#icon-pen" />
+                            <use href={`${sprite}#icon-pen`} />
                         </svg>
-                        Edit</button>
-
+                        Edit
+                    </button>
                 </div>
             </li>
         );
     }
 
-    // ✅ Tablet/Desktop Table Row versiyon
     return (
         <tr>
             <td>{transaction.transactionDate}</td>
             <td>{transaction.type}</td>
             <td>{categoryName}</td>
             <td>{transaction.comment}</td>
-            <td>{transaction.amount}</td>
             <td>
-                <button onClick={handleEdit} className={styles.editBtn}><svg className={styles.editIcon} width="16" height="16">
-                    <use href="src/sprite.svg#icon-pen" />
-                </svg></button>
+                <span className={
+                    transaction.type === 'INCOME'
+                        ? styles.sumIncome
+                        : styles.sumExpense
+                }>
+                    {Math.abs(transaction.amount)}
+                </span>
+            </td>
+            <td>
+                <button onClick={handleEdit} className={styles.editBtn}>
+                    <svg className={styles.editIcon} width="16" height="16">
+                        <use href={`${sprite}#icon-pen`} />
+                    </svg>
+                </button>
                 <button onClick={handleDelete} className={styles.deleteBtn}>Delete</button>
             </td>
         </tr>

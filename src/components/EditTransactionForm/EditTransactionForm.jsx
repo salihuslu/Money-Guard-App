@@ -7,12 +7,12 @@ import { useForm, Controller } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { format } from 'date-fns';
-import { selectCategories } from '../../redux/Statistics/selectors';
+import { selectCategories } from '../../redux/statistics/selectors';
 import { useSelector } from 'react-redux';
-import { selectIsEditID, closeEditModal } from '../../redux/Modals/slice';
-import { selectTransactions } from '../../redux/Transactions/selectors';
+import { selectIsEditID, closeEditModal } from '../../redux/modals/slice';
+import { selectTransactions } from '../../redux/transactions/selectors';
 import { useDispatch } from 'react-redux';
-import { editTransactions } from '../../redux/Transactions/operations';
+import { editTransactions } from '../../redux/transactions/operations';
 
 function EditTransactionForm() {
     const dispatch = useDispatch();

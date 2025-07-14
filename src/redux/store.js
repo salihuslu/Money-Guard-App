@@ -12,10 +12,10 @@ import {
 import storage from 'redux-persist/lib/storage';
 
 import authReducer from './auth/slice';
-import modalsReducer from './Modals/slice';
-import { transactionsReducer } from './Transactions/slice';
-import { statisticsReducer } from './Statistics/slice';
-import { currencyReducer } from './Currency/slice';
+import modalsReducer from './modals/slice';
+import { transactionsReducer } from './transactions/slice';
+import { statisticsReducer } from './statistics/slice';
+import { currencyReducer } from './currency/slice';
 
 const authPersistConfig = {
     key: 'auth',

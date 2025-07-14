@@ -14,7 +14,8 @@ const NavigationTabs = ({ onTabChange }) => {
             <ul className={styles.tabList}>
                 <li>
                     <button
-                        className={activeTab === 'home' ? styles.activeTab : styles.tab}
+                        type="button"
+                        className={`${styles.tab} ${activeTab === 'home' ? styles.activeTab : ''}`}
                         onClick={() => handleTabClick('home')}
                     >
                         <svg className={styles.icon}>
@@ -26,7 +27,8 @@ const NavigationTabs = ({ onTabChange }) => {
 
                 <li>
                     <button
-                        className={activeTab === 'statistics' ? styles.activeTab : styles.tab}
+                        type="button"
+                        className={`${styles.tab} ${activeTab === 'statistics' ? styles.activeTab : ''}`}
                         onClick={() => handleTabClick('statistics')}
                     >
                         <svg className={styles.icon}>
@@ -38,7 +40,8 @@ const NavigationTabs = ({ onTabChange }) => {
 
                 <li className={styles.currencyMobile}>
                     <button
-                        className={activeTab === 'currency' ? styles.activeTab : styles.tab}
+                        type="button"
+                        className={`${styles.tab} ${activeTab === 'currency' ? styles.activeTab : ''}`}
                         onClick={() => handleTabClick('currency')}
                     >
                         <svg className={styles.icon}>
@@ -47,7 +50,6 @@ const NavigationTabs = ({ onTabChange }) => {
                     </button>
                 </li>
             </ul>
-
         </nav>
     );
 };

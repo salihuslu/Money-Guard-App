@@ -1,21 +1,23 @@
-import { Icon } from '../../Icons';
-import s from './AddButton.module.css';
-import { openAddModal } from '../../redux/Modals/slice';
+import styles from './AddButton.module.css';
+import { openAddModal } from '../../redux/modals/slice';
 import { useDispatch } from 'react-redux';
+import Icons from '../../sprite.svg';
 
 const AddButton = () => {
     const dispatch = useDispatch();
 
     return (
-        <div className={s.wrap}>
+        <div className={styles.wrap}>
             <button
-                className={s.btn}
+                className={styles.btn}
                 type="button"
                 onClick={() => {
                     dispatch(openAddModal());
                 }}
             >
-                <Icon id="#icon-plus" className={s.icon} ></Icon>
+                <svg className={styles.icon}>
+                    <use href={Icons + '#icon-plus'}></use>
+                </svg>
             </button>
         </div>
     );

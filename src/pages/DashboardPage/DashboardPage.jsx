@@ -4,12 +4,11 @@ import styles from './DashboardPage.module.css';
 import Header from '../../components/Header/Header';
 import NavigationTabs from '../../components/NavigationTabs/NavigationTabs';
 import HomeTab from '../../components/HomeTab/HomeTab';
-import { getTransactionsCategories } from '../../redux/Statistics/operations';
-import { getTransactions } from '../../redux/Transactions/operations';
-import { selectTransactions } from '../../redux/Transactions/selectors';
+import { getTransactionsCategories } from '../../redux/statistics/operations';
+import { getTransactions } from '../../redux/transactions/operations';
+import { selectTransactions } from '../../redux/transactions/selectors';
 import Currency from '../../components/Currency/Currency';
 import Statistics from '../../components/Statistics/Statistics';
-import { useMediaQuery } from 'react-responsive';
 import Balance from '../../components/HomeTab/Balance';
 
 import TransactionListTablet from '../../components/TransactionListTablet/TransactionListTablet';
@@ -19,9 +18,13 @@ import AddButton from '../../components/AddButton/AddButton';
 import ModalAddTransaction from '../../components/ModalAddTransaction/ModalAddTransaction';
 import ModalEditTransaction from '../../components/ModalEditTransaction/ModalEditTransaction';
 
+import { useMediaQuery } from 'react-responsive';
+
 const DashboardPage = () => {
     const [activeTab, setActiveTab] = useState('home');
-    const isTablet = useMediaQuery({ query: '(min-width: 768px)' });
+    const isTablet = useMediaQuery({ query: '(min-width: 768px) and (max-width: 1151px)' });
+    const isDesktop = useMediaQuery({ query: '(min-width: 1152px)' });
+
     const dispatch = useDispatch();
     const transactions = useSelector(selectTransactions);
 
@@ -37,9 +40,9 @@ const DashboardPage = () => {
             case 'home':
                 return (
                     <>
-                        {!isTablet && <Balance amount={balance} />}
+                        <Balance amount={balance} />
                         <HomeTab />
-                        {!isTablet && <TransactionListMobile />}
+                        <TransactionListMobile />
                     </>
                 );
             case 'statistics':
@@ -54,34 +57,50 @@ const DashboardPage = () => {
     return (
         <div className={styles.container}>
             <Header />
-            {!isTablet ? (
+
+            {/* MOBILE */}
+            {!isTablet && !isDesktop && (
                 <>
                     <NavigationTabs onTabChange={setActiveTab} />
                     <main className={styles.main}>{renderContent()}</main>
+                    {activeTab === 'home' && <AddButton />}
                 </>
-            ) : (
-                <div className={styles.dashboard}>
-                    <div className={styles.content}>
-                        <div className={styles.sidebar}>
-                            <div className={styles.sideTab}>
-                                <NavigationTabs onTabChange={setActiveTab} />
-                                <Balance amount={balance} />
-                            </div>
-                            <Currency />
-                        </div>
-                        {activeTab === "home" &&
-                            <>
-                                <TransactionListTablet />
-                                <AddButton />
-                            </>
-                        }
-                        {activeTab === "statistics" &&
-                            <Statistics />
-                        }
+            )}
 
+            {/* TABLET */}
+            {isTablet && (
+                <div className={styles.dashboardTablet}>
+                    <div className={styles.tabletTopRow}>
+                        <div className={styles.navBalance}>
+                            <NavigationTabs onTabChange={setActiveTab} />
+                            <Balance amount={balance} />
+                        </div>
+                        <Currency />
+                    </div>
+                    <div className={styles.transactionSection}>
+                        {activeTab === 'home' && <TransactionListTablet />}
+                        {activeTab === 'statistics' && <Statistics />}
                     </div>
                     <ModalAddTransaction />
                     <ModalEditTransaction />
+                    {activeTab === 'home' && <AddButton />}
+                </div>
+            )}
+
+            {isDesktop && (
+                <div className={styles.dashboardDesktop}>
+                    <div className={styles.sidebar}>
+                        <NavigationTabs onTabChange={setActiveTab} />
+                        <Balance amount={balance} />
+                        <Currency />
+                    </div>
+                    <div className={styles.transactionSection}>
+                        {activeTab === 'home' && <TransactionListTablet />}
+                        {activeTab === 'statistics' && <Statistics />}
+                    </div>
+                    <ModalAddTransaction />
+                    <ModalEditTransaction />
+                    {activeTab === 'home' && <AddButton />}
                 </div>
             )}
         </div>

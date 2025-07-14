@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectTransactions } from '../../redux/Transactions/selectors';
-import { getTransactionsCategories } from '../../redux/Statistics/operations';
-import { getTransactions } from '../../redux/Transactions/operations';
+import { selectTransactions } from '../../redux/transactions/selectors';
+import { getTransactionsCategories } from '../../redux/statistics/operations';
+import { getTransactions } from '../../redux/transactions/operations';
 import Balance from './Balance';
 import TransactionList from '../TransactionListTablet/TransactionListTablet';
 import AddButton from '../AddButton/AddButton';

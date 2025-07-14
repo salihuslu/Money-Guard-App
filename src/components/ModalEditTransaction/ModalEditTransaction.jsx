@@ -1,7 +1,7 @@
 import Modal from 'react-modal';
 import EditTransactionForm from '../EditTransactionForm/EditTransactionForm';
 import { useDispatch, useSelector } from 'react-redux';
-import { closeEditModal, selectIsEditModalOpen } from '../../redux/Modals/slice';
+import { closeEditModal, selectIsEditModalOpen } from '../../redux/modals/slice';
 
 import s from './ModalEditTransaction.module.css';
 

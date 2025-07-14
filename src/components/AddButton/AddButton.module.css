@@ -2,40 +2,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--button-gradient);
-    border-radius: 100%;
-    padding: 12px;
-    position: fixed;
-    right: 40px;
-    bottom: 40px;
-}
-.btn:hover,
-.btn:focus {
-    transform: scale(1.05);
+    width: 44px;
+    height: 44px;
     background: linear-gradient(96.76deg, #ffc727 -16.42%, #9e40ba 97.04%, #7000ff 150.71%);
-    transition: all 1s ease 0s;
-}
-
-
-.icon {
+    border-radius: 50%;
+    border: none;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1000;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .btn:hover,
+  .btn:focus {
+    transform: scale(1.05);
+  }
+  
+  .icon {
     width: 20px;
     height: 20px;
-    border-radius: 100%;
-    
-}
-
-
-@media screen and (min-width: 768px) {
-    .btn {
-        position: absolute;
-    }
-
-    .wrap {
-        position: absolute;
-        bottom: 0;
-        left: 80%;
-        height: 120px;
-        max-width: 1280px;
-        transform: translateX(-50%);
-    }
-}
+    fill: #fff;
+  }
+  
