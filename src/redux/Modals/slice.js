@@ -52,11 +52,9 @@ export const {
     addEditId,
 } = modalsSlice.actions;
 
-// ✅ Selectors
 export const selectTransaction = state => state.modals.transaction;
 export const selectIsEditModalOpen = state => state.modals.isEditModalOpen;
 export const selectIsAddModalOpen = state => state.modals.isAddModalOpen;
 export const selectIsEditID = state => state.modals.editId;
 
-// ✅ Reducer
-export default modalsSlice.reducer;
+export const modalsReducer = modalsSlice.reducer;
