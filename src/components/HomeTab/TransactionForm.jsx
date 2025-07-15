@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import { addTransaction } from '../../redux/Transactions/operations';
-import { closeAddModal } from '../../redux/Modals/slice';
+import { addTransaction } from '../../redux/transactions/operations';
+import { closeAddModal } from '../../redux/modal/slice';
 
 import styles from './TransactionForm.module.css';
 

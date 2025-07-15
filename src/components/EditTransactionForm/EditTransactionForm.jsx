@@ -9,7 +9,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { format } from 'date-fns';
 import { selectCategories } from '../../redux/statistics/selectors';
 import { useSelector } from 'react-redux';
-import { selectIsEditID, closeEditModal } from '../../redux/modals/slice';
+import { selectIsEditID, closeEditModal } from '../../redux/modal/slice';
 import { selectTransactions } from '../../redux/transactions/selectors';
 import { useDispatch } from 'react-redux';
 import { editTransactions } from '../../redux/transactions/operations';

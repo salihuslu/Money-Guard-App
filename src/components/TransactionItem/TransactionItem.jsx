@@ -1,7 +1,7 @@
 import styles from './TransactionItem.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteTransaction } from '../../redux/transactions/operations';
-import { openEditModal, setEditID } from '../../redux/modals/slice';
+import { openEditModal, setEditID } from '../../redux/modal/slice';
 import { selectCategories } from '../../redux/statistics/selectors';
 
 import sprite from '../../sprite.svg'; // sprite dosyasını import et

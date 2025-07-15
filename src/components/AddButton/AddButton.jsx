@@ -1,5 +1,5 @@
 import styles from './AddButton.module.css';
-import { openAddModal } from '../../redux/modals/slice';
+import { openAddModal } from '../../redux/modal/slice';
 import { useDispatch } from 'react-redux';
 import Icons from '../../sprite.svg';
 
