@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { selectTransactions } from '../../redux/transactions/selectors';
+import { selectTransactions } from '../../redux/transaction/selectors';
 import TransactionItem from '../TransactionItem/TransactionItem';
 import styles from './TransactionListTablet.module.css';
 

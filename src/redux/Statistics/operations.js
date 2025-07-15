@@ -1,7 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { userTransactionsApi, setToken } from '../../services/api';
 
-export const getTransactionsSummaryByPeriod = createAsyncThunk('transactions/summary', async ({ month, year }, thunkApi) => {
+export const getTransactionsSummaryByPeriod = createAsyncThunk('transaction/summary', async ({ month, year }, thunkApi) => {
     const savedToken = thunkApi.getState().auth.token;
     if (savedToken) {
         setToken(savedToken);

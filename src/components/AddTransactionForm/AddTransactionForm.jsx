@@ -12,7 +12,7 @@ import { useSelector } from 'react-redux';
 import Select from 'react-select';
 import { customStyles } from './customStyles';
 import { useDispatch } from 'react-redux';
-import { addTransaction } from '../../redux/transactions/operations';
+import { addTransaction } from '../../redux/transaction/operations';
 import { closeAddModal } from '../../redux/modal/slice';
 import CustomDropIndicator from '../CustomDropIndicator/CustomDropIndicator';
 

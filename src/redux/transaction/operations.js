@@ -1,7 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { userTransactionsApi } from '../../services/api';
 
-export const getTransactions = createAsyncThunk('transactions/all', async (_, thunkApi) => {
+export const getTransactions = createAsyncThunk('transaction/all', async (_, thunkApi) => {
     try {
         const { data } = await userTransactionsApi.get('/transactions');
         return data;
@@ -11,7 +11,7 @@ export const getTransactions = createAsyncThunk('transactions/all', async (_, th
 });
 
 export const addTransaction = createAsyncThunk(
-    'transactions/addTransaction',
+    'transaction/addTransaction',
     async (transactionData, thunkAPI) => {
         try {
             const response = await userTransactionsApi.post('/transactions', transactionData);
@@ -23,18 +23,18 @@ export const addTransaction = createAsyncThunk(
 );
 
 
-export const deleteTransaction = createAsyncThunk('transactions/delete', async (id, thunkApi) => {
+export const deleteTransaction = createAsyncThunk('transaction/delete', async (id, thunkApi) => {
     try {
-        await userTransactionsApi.delete(`/transactions/${id}`);
+        await userTransactionsApi.delete(`/transaction/${id}`);
         return id;
     } catch (error) {
         return thunkApi.rejectWithValue(error.message);
     }
 });
 
-export const editTransactions = createAsyncThunk('transactions/edit', async ({ id, transaction }, thunkApi) => {
+export const editTransactions = createAsyncThunk('transaction/edit', async ({ id, transaction }, thunkApi) => {
     try {
-        const { data } = await userTransactionsApi.patch(`/transactions/${id}`, transaction);
+        const { data } = await userTransactionsApi.patch(`/transaction/${id}`, transaction);
         return data;
     } catch (error) {
         return thunkApi.rejectWithValue(error.message);

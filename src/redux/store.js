@@ -13,7 +13,7 @@ import storage from 'redux-persist/lib/storage';
 
 import { authReducer } from './auth/slice';
 import { modalsReducer } from './modal/slice';
-import { transactionsReducer } from './transactions/slice';
+import { transactionsReducer } from './transaction/slice';
 import { statisticsReducer } from './statistics/slice';
 import { currencyReducer } from './currency/slice';
 

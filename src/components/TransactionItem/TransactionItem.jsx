@@ -1,6 +1,6 @@
 import styles from './TransactionItem.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteTransaction } from '../../redux/transactions/operations';
+import { deleteTransaction } from '../../redux/transaction/operations';
 import { openEditModal, setEditID } from '../../redux/modal/slice';
 import { selectCategories } from '../../redux/statistics/selectors';
 
