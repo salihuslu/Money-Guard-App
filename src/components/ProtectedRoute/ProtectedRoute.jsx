@@ -15,7 +15,9 @@ const ProtectedRoute = ({ children }) => {
 
     if (isRefreshing) return <p>Loading...</p>;
 
-    if (!isLoggedIn && !token) return <Navigate to="/" replace />;
+    if (!token) return <Navigate to="/" replace />;
+
+    if (!isLoggedIn) return <p>Loading...</p>;
 
     return children;
 };

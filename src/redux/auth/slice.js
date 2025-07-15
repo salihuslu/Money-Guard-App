@@ -57,7 +57,10 @@ const authSlice = createSlice({
             })
             .addCase(refreshUser.rejected, state => {
                 state.isRefreshing = false;
+                state.isLoggedIn = false;
+                state.token = null;
             })
+
             .addCase(getBalanceThunk.fulfilled, (state, { payload }) => {
                 state.user.balance = payload;
             })

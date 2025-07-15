@@ -15,19 +15,31 @@ const DashboardPage = lazy(() => import('./pages/DashboardPage/DashboardPage'));
 
 const AppWrapper = () => {
   const dispatch = useDispatch();
-  const token = useSelector(selectToken);
+  const { token, isLoggedIn, isRefreshing } = useSelector(state => state.auth);
 
   useEffect(() => {
-    if (token) {
+    if (token && !isLoggedIn) {
       dispatch(refreshUser());
     }
-  }, [dispatch, token]);
+  }, [dispatch, token, isLoggedIn]);
+
+  if (isRefreshing) return <p>Loading...</p>;
 
   return (
     <Suspense fallback={<div>Yükleniyor...</div>}>
       <Routes>
-        <Route path="/" element={<LoginPage />} />
-        <Route path="/register" element={<RegistrationPage />} />
+        <Route
+          path="/"
+          element={
+            isLoggedIn ? <Navigate to="/dashboard" replace /> : <LoginPage />
+          }
+        />
+        <Route
+          path="/register"
+          element={
+            isLoggedIn ? <Navigate to="/dashboard" replace /> : <RegistrationPage />
+          }
+        />
         <Route
           path="/dashboard"
           element={
