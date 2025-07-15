@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Select from 'react-select';
 
 import { selectIsLoggedIn } from '../../redux/auth/selectors';
-import { getTransactionsSummaryByPeriod } from '../../redux/statistics/operations';
+import { getTransactionsSummaryByPeriod } from '../../redux/statistic/operations';
 import { monthName, currentMonth, currentYear, optionsMonth, optionsYear } from './serviceSelect';
 
 import CustomDropIndicator from '../CustomDropIndicator/CustomDropIndicator';

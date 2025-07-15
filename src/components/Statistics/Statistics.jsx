@@ -1,11 +1,11 @@
 import { useDispatch, useSelector } from 'react-redux';
 import ChartDoughnut from '../ChartDoughnut/ChartDoughnut';
 import s from './Statistics.module.css';
-import { selectSummary } from '../../redux/statistics/selectors';
+import { selectSummary } from '../../redux/statistic/selectors';
 import coloredCategoriesMap from './coloredCategoriesMap';
 import StatisticsTable from './StatisticsTable';
 import { useEffect } from 'react';
-import { getTransactionsSummaryByPeriod } from '../../redux/statistics/operations';
+import { getTransactionsSummaryByPeriod } from '../../redux/statistic/operations';
 import { getCurrentMonthYear } from '../../helpers/dateHelper';
 import StatisticsSelector from '../StatisticsSelector/StatisticsSelector';
 

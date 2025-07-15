@@ -7,7 +7,7 @@ import { useForm, Controller } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { format } from 'date-fns';
-import { selectCategories } from '../../redux/statistics/selectors';
+import { selectCategories } from '../../redux/statistic/selectors';
 import { useSelector } from 'react-redux';
 import Select from 'react-select';
 import { customStyles } from './customStyles';

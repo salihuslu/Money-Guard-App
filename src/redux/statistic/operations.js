@@ -17,7 +17,7 @@ export const getTransactionsSummaryByPeriod = createAsyncThunk('transaction/summ
 });
 
 export const getTransactionsCategories = createAsyncThunk(
-    'statistics/getCategories',
+    'statistic/getCategories',
     async (_, thunkAPI) => {
         try {
             const response = await userTransactionsApi.get('/transaction-categories');

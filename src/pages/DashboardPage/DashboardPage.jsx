@@ -4,7 +4,7 @@ import styles from './DashboardPage.module.css';
 import Header from '../../components/Header/Header';
 import NavigationTabs from '../../components/NavigationTabs/NavigationTabs';
 import HomeTab from '../../components/HomeTab/HomeTab';
-import { getTransactionsCategories } from '../../redux/statistics/operations';
+import { getTransactionsCategories } from '../../redux/statistic/operations';
 import { getTransactions } from '../../redux/transaction/operations';
 import { selectTransactions } from '../../redux/transaction/selectors';
 import Currency from '../../components/Currency/Currency';

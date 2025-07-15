@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectTransactions } from '../../redux/transaction/selectors';
-import { getTransactionsCategories } from '../../redux/statistics/operations';
+import { getTransactionsCategories } from '../../redux/statistic/operations';
 import { getTransactions } from '../../redux/transaction/operations';
 import Balance from './Balance';
 import TransactionList from '../TransactionListTablet/TransactionListTablet';

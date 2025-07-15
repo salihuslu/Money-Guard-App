@@ -14,7 +14,7 @@ import storage from 'redux-persist/lib/storage';
 import { authReducer } from './auth/slice';
 import { modalsReducer } from './modal/slice';
 import { transactionsReducer } from './transaction/slice';
-import { statisticsReducer } from './statistics/slice';
+import { statisticsReducer } from './statistic/slice';
 import { currencyReducer } from './currency/slice';
 
 const authPersistConfig = {
