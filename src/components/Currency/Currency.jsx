@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectCurrencyData } from '../../redux/currency/selectors';
+import { selectCurrencyData } from '../../redux/currencies/selectors';
 
 import s from './Currency.module.css';
 
 import imageTab from '/img/currency.png';
-import { getCurrency } from '../../redux/currency/operations';
+import { getCurrency } from '../../redux/currencies/operations';
 import { useMediaQuery } from 'react-responsive';
 
 function useMedia() {

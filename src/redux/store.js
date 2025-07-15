@@ -15,7 +15,7 @@ import { authReducer } from './auth/slice';
 import { modalsReducer } from './modal/slice';
 import { transactionsReducer } from './transaction/slice';
 import { statisticsReducer } from './statistic/slice';
-import { currencyReducer } from './currency/slice';
+import { currencyReducer } from './currencies/slice';
 
 const authPersistConfig = {
     key: 'auth',
