@@ -70,10 +70,11 @@ const RegistrationForm = ({ onSubmit, onLoginRedirect }) => {
                     <button type="submit" className={styles.registerButton}>
                         REGISTER
                     </button>
-                    <button type="button" className={styles.loginButton} onClick={onLoginRedirect}>
-                        LOG IN
-                    </button>
+
                 </div>
+                <button type="button" className={styles.loginButton} onClick={onLoginRedirect}>
+                    LOG IN
+                </button>
             </Form>
         </Formik>
     );

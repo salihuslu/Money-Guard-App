@@ -27,12 +27,16 @@ const RegistrationPage = () => {
 
     return (
         <div className={styles.container}>
-            <h1 className={styles.title}>
-                <img src="/favicon.ico" alt="favicon" className={styles.favicon} />
-                Money Guard
-            </h1>
-
-            <RegistrationForm onSubmit={handleSubmit} onLoginRedirect={handleLoginRedirect} />
+            <div className={styles.form}>
+                <h1 className={styles.title}>
+                    <img src="/favicon.ico" alt="favicon" className={styles.favicon} />
+                    Money Guard
+                </h1>
+                <RegistrationForm
+                    onSubmit={handleSubmit}
+                    onLoginRedirect={handleLoginRedirect}
+                />
+            </div>
         </div>
     );
 };

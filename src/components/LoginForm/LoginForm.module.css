@@ -132,7 +132,6 @@
   }
 }
 
-/* Desktop */
 @media screen and (min-width: 1280px) {
   .container {
     width: 600px;
@@ -157,8 +156,8 @@
 
   .registerButton,
   .loginButton {
-    font-size: 20px;
-    padding: 18px;
-    max-width: 440px;
+    font-size: 18px;
+    padding: 16px;
+    max-width: 400px;
   }
 }
