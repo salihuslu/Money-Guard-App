@@ -3,6 +3,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 24px;
+
   }
   
   .logoWrapper {
@@ -40,4 +41,17 @@
     height: 24px;
     cursor: pointer;
   }
+  
+  @media (min-width: 768px) {
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px;
+      background: linear-gradient(270.02deg, #2E1746 3.2%, #2E225F 99.98%);
+
+    }
+  }
+
   

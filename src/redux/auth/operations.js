@@ -6,14 +6,12 @@ export const register = createAsyncThunk(
     async (credentials, thunkAPI) => {
         try {
             const res = await userTransactionsApi.post('/auth/sign-up', credentials);
-            setToken(res.data.token);
 
             return {
                 user: {
                     name: res.data.name,
                     email: res.data.email,
                 },
-                token: res.data.token,
             };
         } catch (error) {
             return thunkAPI.rejectWithValue(

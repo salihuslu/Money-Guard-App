@@ -2,7 +2,6 @@
 
 .container {
   min-height: 100vh;
-  padding: 16px;
   background-image: url('../../assets/images/background.png');
   background-size: cover;
   background-position: center;
@@ -118,9 +117,6 @@
 }
 
 @media (min-width: 768px) {
-  .container {
-    padding: 32px 48px;
-  }
 
   .title {
     font-size: 28px;

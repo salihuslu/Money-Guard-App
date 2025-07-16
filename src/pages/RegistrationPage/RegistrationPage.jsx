@@ -12,7 +12,7 @@ const RegistrationPage = () => {
         try {
             const resultAction = await dispatch(register(values));
             if (register.fulfilled.match(resultAction)) {
-                navigate('/dashboard');
+                navigate('/');
             } else {
                 alert(resultAction.payload || 'Registration failed');
             }
