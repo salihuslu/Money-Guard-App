@@ -8,8 +8,8 @@ import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
 const LoginSchema = Yup.object().shape({
-    email: Yup.string().email('Geçerli bir e-posta girin').required('Zorunlu'),
-    password: Yup.string().min(6, 'En az 6 karakter').required('Zorunlu'),
+    email: Yup.string().email('Geçerli bir e-posta girin').required('Required'),
+    password: Yup.string().min(6, 'En az 6 karakter').required('Required'),
 });
 
 const LoginForm = () => {

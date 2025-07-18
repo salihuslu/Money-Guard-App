@@ -84,6 +84,7 @@ img {
     .currency_table_head {
         justify-content: center;
         gap: 35px;
+        list-style: none;
     }
 
     .currency_item:nth-child(3) {

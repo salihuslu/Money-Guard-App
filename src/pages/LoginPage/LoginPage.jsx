@@ -6,8 +6,8 @@ import { useDispatch } from 'react-redux';
 import { login } from '../../redux/auth/operations';
 
 const LoginSchema = Yup.object().shape({
-    email: Yup.string().email('Please enter a valid email address').required('Compulsory'),
-    password: Yup.string().min(6, 'At least 6 characters').required('Compulsory'),
+    email: Yup.string().email('Please enter a valid email address').required('Required'),
+    password: Yup.string().min(6, 'At least 6 characters').required('Required'),
 });
 
 const LoginPage = () => {

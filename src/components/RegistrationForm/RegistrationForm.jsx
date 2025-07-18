@@ -3,12 +3,12 @@ import * as Yup from 'yup';
 import styles from './RegistrationForm.module.css';
 
 const RegistrationSchema = Yup.object().shape({
-    name: Yup.string().required('Zorunlu'),
-    email: Yup.string().email('Geçerli bir e-posta girin').required('Zorunlu'),
-    password: Yup.string().min(6, 'En az 6 karakter').max(12, 'En fazla 12 karakter').required('Zorunlu'),
+    name: Yup.string().required('Required'),
+    email: Yup.string().email('Geçerli bir e-posta girin').required('Required'),
+    password: Yup.string().min(6, 'En az 6 karakter').max(12, 'En fazla 12 karakter').required('Required'),
     confirmPassword: Yup.string()
         .oneOf([Yup.ref('password')], 'Şifreler eşleşmiyor')
-        .required('Zorunlu'),
+        .required('Required'),
 });
 
 const RegistrationForm = ({ onSubmit, onLoginRedirect }) => {

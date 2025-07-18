@@ -57,8 +57,6 @@ const DashboardPage = () => {
     return (
         <div className={styles.container}>
             <Header />
-
-            {/* MOBILE */}
             {!isTablet && !isDesktop && (
                 <>
                     <NavigationTabs onTabChange={setActiveTab} />
@@ -67,7 +65,6 @@ const DashboardPage = () => {
                 </>
             )}
 
-            {/* TABLET */}
             {isTablet && (
                 <div className={styles.dashboardTablet}>
                     <div className={styles.tabletTopRow}>
