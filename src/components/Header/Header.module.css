@@ -1,57 +1,81 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+}
 
+.logoWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.userSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.username {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.divider {
+  display: none; 
+}
+
+.logoutButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.exitIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.exitText {
+  display: none; 
+}
+
+@media (min-width: 768px) {
+  .header {
+    background: linear-gradient(270.02deg, #2E1746 3.2%, #2E225F 99.98%);
+    height: 80px;
   }
-  
-  .logoWrapper {
+
+  .divider {
+    display: inline-block;
+    width: 1px;
+    height: 24px;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .logoutButton {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 12px;
-  }
-  
-  .logo {
-    width: 32px;
-    height: 32px;
-  }
-  
-  .title {
-    font-size: 20px;
-    font-weight: 600;
+    gap: 8px;
     color: #fff;
   }
-  
-  .userSection {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  
-  .username {
-    color: #fff;
+
+  .exitText {
+    display: inline; 
     font-size: 16px;
     font-weight: 500;
   }
-  
-  .exitIcon {
-    width: 24px;
-    height: 24px;
-    cursor: pointer;
-  }
-  
-  @media (min-width: 768px) {
-
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 24px;
-      background: linear-gradient(270.02deg, #2E1746 3.2%, #2E225F 99.98%);
-
-    }
-  }
-
-  
+}

@@ -31,9 +31,15 @@
 }
 
 .sumPositive {
-  color: #00ff00; /* İstediğin renge göre değiştir */
+  color: #00ff00;
 }
 
 .sumNegative {
   color: #ff0000;
+}
+@media (min-width: 1280px) {
+
+  .transactionsTable {
+    margin: 46px;
+  }
 }

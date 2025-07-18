@@ -16,7 +16,7 @@ const TransactionListTablet = () => {
                         <th>Category</th>
                         <th>Comment</th>
                         <th>Sum</th>
-                        <th>Action</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>

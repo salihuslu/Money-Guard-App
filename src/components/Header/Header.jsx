@@ -37,13 +37,17 @@ const Header = () => {
                     <span className={styles.guest}>Guest Mode</span>
                 )}
 
-                <img
-                    src={exitIcon}
-                    alt="Logout"
-                    className={styles.exitIcon}
-                    title="Logout"
-                    onClick={openModal}
-                />
+                <span className={styles.divider}></span>
+
+                <button className={styles.logoutButton} onClick={openModal}>
+                    <img
+                        src={exitIcon}
+                        alt="Logout"
+                        className={styles.exitIcon}
+                        title="Logout"
+                    />
+                    <span className={styles.exitText}>Exit</span>
+                </button>
 
                 {isOpen && (
                     <LogOutModal

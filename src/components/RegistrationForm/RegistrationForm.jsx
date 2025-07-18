@@ -4,10 +4,10 @@ import styles from './RegistrationForm.module.css';
 
 const RegistrationSchema = Yup.object().shape({
     name: Yup.string().required('Required'),
-    email: Yup.string().email('Geçerli bir e-posta girin').required('Required'),
-    password: Yup.string().min(6, 'En az 6 karakter').max(12, 'En fazla 12 karakter').required('Required'),
+    email: Yup.string().email('Please enter a valid email').required('Required'),
+    password: Yup.string().min(6, 'At least 6 characters').max(12, 'Maximum 12 characters').required('Required'),
     confirmPassword: Yup.string()
-        .oneOf([Yup.ref('password')], 'Şifreler eşleşmiyor')
+        .oneOf([Yup.ref('password')], 'Passwords do not match')
         .required('Required'),
 });
 
@@ -26,7 +26,7 @@ const RegistrationForm = ({ onSubmit, onLoginRedirect }) => {
                 try {
                     await onSubmit(formattedFormValues);
                 } catch (error) {
-                    console.error('Kayıt sırasında hata:', error);
+                    console.error(' Error during registration:', error);
                 } finally {
                     actions.setSubmitting(false);
                     actions.resetForm();
