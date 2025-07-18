@@ -4,8 +4,6 @@ import { deleteTransaction } from '../../redux/transaction/operations';
 import { openEditModal, setEditID } from '../../redux/modal/slice';
 import { selectCategories } from '../../redux/statistic/selectors';
 
-import sprite from '../../sprite.svg'; // sprite dosyasını import et
-
 const TransactionItem = ({ transaction, isMobile = false }) => {
     const dispatch = useDispatch();
     const categories = useSelector(selectCategories);
@@ -57,7 +55,7 @@ const TransactionItem = ({ transaction, isMobile = false }) => {
                     <button onClick={handleDelete} className={styles.deleteBtn}>Delete</button>
                     <button onClick={handleEdit} className={styles.editBtn}>
                         <svg className={styles.editIcon} width="16" height="16">
-                            <use href={`${sprite}#icon-pen`} />
+                            <use href="/sprite.svg#icon-pen" />
                         </svg>
                         Edit
                     </button>
@@ -84,7 +82,7 @@ const TransactionItem = ({ transaction, isMobile = false }) => {
             <td>
                 <button onClick={handleEdit} className={styles.editBtn}>
                     <svg className={styles.editIcon} width="16" height="16">
-                        <use href={`${sprite}#icon-pen`} />
+                        <use href="/sprite.svg#icon-pen" />
                     </svg>
                 </button>
                 <button onClick={handleDelete} className={styles.deleteBtn}>Delete</button>

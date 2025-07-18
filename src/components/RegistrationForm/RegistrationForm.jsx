@@ -36,7 +36,7 @@ const RegistrationForm = ({ onSubmit, onLoginRedirect }) => {
             <Form className={styles.form}>
                 <div className={styles.inputWrapper}>
                     <svg className={styles.icon}>
-                        <use href="src/assets/symbol-defs.svg#icon-user" />
+                        <use href="/symbol-defs.svg#icon-user" />
                     </svg>
                     <Field name="name" placeholder="Name" className={styles.input} />
                 </div>
@@ -44,7 +44,7 @@ const RegistrationForm = ({ onSubmit, onLoginRedirect }) => {
 
                 <div className={styles.inputWrapper}>
                     <svg className={styles.icon}>
-                        <use href="src/assets/symbol-defs.svg#icon-e-mail" />
+                        <use href="/symbol-defs.svg#icon-e-mail" />
                     </svg>
                     <Field name="email" type="email" placeholder="E-mail" className={styles.input} />
                 </div>
@@ -52,7 +52,7 @@ const RegistrationForm = ({ onSubmit, onLoginRedirect }) => {
 
                 <div className={styles.inputWrapper}>
                     <svg className={styles.icon}>
-                        <use href="src/assets/symbol-defs.svg#icon-lock" />
+                        <use href="/symbol-defs.svg#icon-lock" />
                     </svg>
                     <Field name="password" type="password" placeholder="Password" className={styles.input} />
                 </div>
@@ -60,7 +60,7 @@ const RegistrationForm = ({ onSubmit, onLoginRedirect }) => {
 
                 <div className={styles.inputWrapper}>
                     <svg className={styles.icon}>
-                        <use href="src/assets/symbol-defs.svg#icon-lock" />
+                        <use href="/symbol-defs.svg#icon-lock" />
                     </svg>
                     <Field name="confirmPassword" type="password" placeholder="Confirm Password" className={styles.input} />
                 </div>

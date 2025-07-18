@@ -42,7 +42,7 @@ const LoginPage = () => {
                 <Form className={styles.form}>
                     <div className={styles.inputGroup}>
                         <svg className={styles.icon}>
-                            <use href="src/assets/symbol-defs.svg#icon-e-mail" />
+                            <use href="/symbol-defs.svg#icon-e-mail" />
                         </svg>
                         <Field
                             name="email"
@@ -56,7 +56,7 @@ const LoginPage = () => {
 
                     <div className={styles.inputGroup}>
                         <svg className={styles.icon}>
-                            <use href="src/assets/symbol-defs.svg#icon-lock" />
+                            <use href="/symbol-defs.svg#icon-lock" />
                         </svg>
                         <Field
                             name="password"

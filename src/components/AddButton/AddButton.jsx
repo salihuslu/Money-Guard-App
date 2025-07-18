@@ -1,7 +1,6 @@
 import styles from './AddButton.module.css';
 import { openAddModal } from '../../redux/modal/slice';
 import { useDispatch } from 'react-redux';
-import Icons from '../../sprite.svg';
 
 const AddButton = () => {
     const dispatch = useDispatch();
@@ -16,7 +15,7 @@ const AddButton = () => {
                 }}
             >
                 <svg className={styles.icon}>
-                    <use href={Icons + '#icon-plus'}></use>
+                    <use href="/sprite.svg#icon-plus"></use>
                 </svg>
             </button>
         </div>
