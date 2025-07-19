@@ -108,6 +108,7 @@
   .container {
     justify-content: center;
     padding: 60px;
+    background-blend-mode: hue;
   }
 
   .title {
