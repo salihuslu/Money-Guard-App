@@ -2,6 +2,9 @@
 
 .container {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
   background-image: url('../../assets/images/background.png');
   background-size: cover;
   background-position: center;
@@ -102,15 +105,19 @@
 
 .dashboardDesktop {
   display: flex;
+  flex: 1;
   flex-direction: row;
   gap: 32px;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .sidebar {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  flex: 0 0 300px;
+  justify-content: space-between;
   border-right-style: outset;
 }
 

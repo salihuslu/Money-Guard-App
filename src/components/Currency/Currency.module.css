@@ -109,7 +109,7 @@ img {
     .currency_wrapper {
         margin-top: 35px;
         max-width: 480px;
-        height: 340px;
+        height: 50%;
     }
 
     .currency_table {

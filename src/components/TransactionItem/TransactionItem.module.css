@@ -16,10 +16,29 @@
     rgba(255, 255, 255, 0.02)
   );
   border-radius: 12px;
-  padding: 16px;
+  /* padding: 16px; */
   color: #fff;
 }
+.cardContainer {
+  display: flex;
+}
 
+.cardSider {
+  width: 10px;
+  border-radius: 10px 0 0 10px;
+}
+
+.cardSiderIncome {
+  background-color: #FFB627;
+}
+
+.cardSiderExpense {
+  background-color: #FF868D;
+}
+
+.fullWidth{
+  width: 100%;
+}
 .cardContent {
   display: flex;
   flex-direction: column;

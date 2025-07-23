@@ -22,12 +22,9 @@
     font-weight: 700;
     display: flex;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     .card {
-      background: linear-gradient(135deg, #6f42c1, #9b59b6);
-      color: white;
-      padding: 8px 30px;
-      text-align: center;
       width: 100%;
+
     }
   }

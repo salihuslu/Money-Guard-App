@@ -22,8 +22,8 @@ import { useMediaQuery } from 'react-responsive';
 
 const DashboardPage = () => {
     const [activeTab, setActiveTab] = useState('home');
-    const isTablet = useMediaQuery({ query: '(min-width: 768px) and (max-width: 1151px)' });
-    const isDesktop = useMediaQuery({ query: '(min-width: 1152px)' });
+    const isTablet = useMediaQuery({ query: '(min-width: 768px) and (max-width: 1279px)' });
+    const isDesktop = useMediaQuery({ query: '(min-width: 1280px)' });
 
     const dispatch = useDispatch();
     const transactions = useSelector(selectTransactions);

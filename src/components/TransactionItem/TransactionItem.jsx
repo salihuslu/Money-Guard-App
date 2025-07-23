@@ -20,45 +20,59 @@ const TransactionItem = ({ transaction, isMobile = false }) => {
     const category = categories.find(cat => cat.id === transaction.categoryId);
     const categoryName = category ? category.name : 'Unknown';
 
+    const siderClass =
+        transaction.type === 'INCOME'
+            ? styles.cardSiderIncome
+            : styles.cardSiderExpense;
+
     if (isMobile) {
         return (
             <li className={styles.card}>
-                <div className={styles.cardContent}>
-                    <div className={styles.cardRow}>
-                        <strong>Date</strong>
-                        <span>{transaction.transactionDate}</span>
+                <div className={styles.cardContainer}>
+                    <div className={`${styles.cardSider} ${siderClass}`}></div>
+                    <div className={styles.fullWidth}>
+                        <div className={styles.cardContent}>
+                            <div className={styles.cardRow}>
+                                <strong>Date</strong>
+                                <span>{transaction.transactionDate}</span>
+                            </div>
+                            <div className={styles.cardRow}>
+                                <strong>Type</strong>
+                                <span>{transaction.type}</span>
+                            </div>
+                            <div className={styles.cardRow}>
+                                <strong>Category</strong>
+                                <span>{categoryName}</span>
+                            </div>
+                            <div className={styles.cardRow}>
+                                <strong>Comment</strong>
+                                <span>{transaction.comment}</span>
+                            </div>
+                            <div className={styles.cardRow}>
+                                <strong>Sum</strong>
+                                <span
+                                    className={
+                                        transaction.type === 'INCOME'
+                                            ? styles.sumIncome
+                                            : styles.sumExpense
+                                    }
+                                >
+                                    {Math.abs(transaction.amount)}
+                                </span>
+                            </div>
+                        </div>
+                        <div className={styles.cardFooter}>
+                            <button onClick={handleDelete} className={styles.deleteBtn}>
+                                Delete
+                            </button>
+                            <button onClick={handleEdit} className={styles.editBtn}>
+                                <svg className={styles.editIcon} width="16" height="16">
+                                    <use href="/sprite.svg#icon-pen" />
+                                </svg>
+                                Edit
+                            </button>
+                        </div>
                     </div>
-                    <div className={styles.cardRow}>
-                        <strong>Type</strong>
-                        <span>{transaction.type}</span>
-                    </div>
-                    <div className={styles.cardRow}>
-                        <strong>Category</strong>
-                        <span>{categoryName}</span>
-                    </div>
-                    <div className={styles.cardRow}>
-                        <strong>Comment</strong>
-                        <span>{transaction.comment}</span>
-                    </div>
-                    <div className={styles.cardRow}>
-                        <strong>Sum</strong>
-                        <span className={
-                            transaction.type === 'INCOME'
-                                ? styles.sumIncome
-                                : styles.sumExpense
-                        }>
-                            {Math.abs(transaction.amount)}
-                        </span>
-                    </div>
-                </div>
-                <div className={styles.cardFooter}>
-                    <button onClick={handleDelete} className={styles.deleteBtn}>Delete</button>
-                    <button onClick={handleEdit} className={styles.editBtn}>
-                        <svg className={styles.editIcon} width="16" height="16">
-                            <use href="/sprite.svg#icon-pen" />
-                        </svg>
-                        Edit
-                    </button>
                 </div>
             </li>
         );
@@ -71,11 +85,13 @@ const TransactionItem = ({ transaction, isMobile = false }) => {
             <td>{categoryName}</td>
             <td>{transaction.comment}</td>
             <td>
-                <span className={
-                    transaction.type === 'INCOME'
-                        ? styles.sumIncome
-                        : styles.sumExpense
-                }>
+                <span
+                    className={
+                        transaction.type === 'INCOME'
+                            ? styles.sumIncome
+                            : styles.sumExpense
+                    }
+                >
                     {Math.abs(transaction.amount)}
                 </span>
             </td>
@@ -85,7 +101,9 @@ const TransactionItem = ({ transaction, isMobile = false }) => {
                         <use href="/sprite.svg#icon-pen" />
                     </svg>
                 </button>
-                <button onClick={handleDelete} className={styles.deleteBtn}>Delete</button>
+                <button onClick={handleDelete} className={styles.deleteBtn}>
+                    Delete
+                </button>
             </td>
         </tr>
     );
